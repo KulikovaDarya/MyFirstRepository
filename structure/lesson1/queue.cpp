@@ -30,14 +30,3 @@ int queue_isempty(queue * q)
     if (q -> size == 0) return 1;
     else return 0;
 }
-int main()
-{
-    queue q1;
-    queue_init(&q1);
-    queue_add(&q1,10);
-    queue_add(&q1,20);
-    printf("%d\n",queue_first(&q1)); // 10
-    queue_drop(&q1);
-    if(!queue_isempty(&q1))
-        printf("%d\n",queue_first(&q1)); // 20
-}
